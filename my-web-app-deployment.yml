@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+  labels:
+    name: web-app-l
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      name: web-app-l
+  template:
+    metadata:
+      labels:
+        name: web-app-l
+    spec:
+      containers:
+        - name: web-application-con
+          image: hortensehouendji/welcome-jenkins:v9
+          ports:
+            - containerPort: 80
