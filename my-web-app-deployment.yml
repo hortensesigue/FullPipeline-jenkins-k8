@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: web-application-con
-          image: hortensehouendji/welcome-jenkins:v9
+          image: hortensehouendji/web-app:v9
           ports:
             - containerPort: 80
